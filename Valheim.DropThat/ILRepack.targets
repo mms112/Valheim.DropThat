@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<Target Name="ILRepacker" AfterTargets="Build" Condition="'$(Configuration)' != 'Test'">
-
+	<Target Name="ILRepacker" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' != 'Test'">
 		<ItemGroup>
 			<InputAssemblies Include="$(TargetPath)" />
 			<InputAssemblies Include="$(OutputPath)\YamlDotNet.dll" />
 			<InputAssemblies Include="$(OutputPath)\ThatCore.dll" />
 			<InputAssemblies Include="$(OutputPath)\ThatCore.Shared.dll" />
 			<InputAssemblies Include="$(OutputPath)\ThatCore.Valheim.dll" />
-			<LibraryPath  Include="$(OutputPath)" />
+			<LibraryPath Include="$(OutputPath)" />
+			<LibraryPath Include="$(BepInExPath)\core" />
+			<LibraryPath Include="$(ManagedDataPath)" />
 		</ItemGroup>
 
 		<ItemGroup>
