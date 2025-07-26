@@ -38,4 +38,13 @@
       <HintPath>..\Libs\ThatCore\ThatCore.Valheim.dll</HintPath>
     </Reference>
   </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="$(SolutionDir)\Config\$(AssemblyName)\drop_that.character_drop.cfg" Link="Config\drop_that.character_drop.cfg" />
+    <Content Include="$(SolutionDir)\Config\$(AssemblyName)\drop_that.drop_table.cfg" Link="Config\drop_that.drop_table.cfg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Include="@(Content)" />
+  </ItemGroup>
 </Project>
