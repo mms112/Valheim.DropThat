@@ -78,7 +78,7 @@ internal static class ItemService
         MagicItemComponent magicComponent = itemData.Data().GetOrCreate<MagicItemComponent>();
 
         magicComponent.SetMagicItem(magicItem);
-        LootRoller.InitializeMagicItem(itemData);
+        // LootRoller.InitializeMagicItem(itemData);
 
         return true;
     }
@@ -94,7 +94,7 @@ internal static class ItemService
 
         magicComponent.SetMagicItem(magicItem);
 
-        LootRoller.InitializeMagicItem(itemData);
+        // LootRoller.InitializeMagicItem(itemData);
     }
 
     private static MagicItemEffectDefinition RollWeightedEffect(List<MagicItemEffectDefinition> magicEffects, bool removeSelected)
